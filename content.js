@@ -14,6 +14,11 @@ function createUpdateSetListIcon(){
     icon.className = 'icon-all-apps btn btn-icon ng-scope';
     icon.href = '/sys_update_set_list.do';
     icon.target = 'gsft_main';
+    var dataToggle = document.createAttribute('data-toggle');
+    dataToggle.value = 'tooltip';
+    icon.setAttributeNode(dataToggle);
+    icon.setAttributeNode(document.createAttribute('data-original-title'));
+    icon.setAttributeNode(document.createAttribute('title'));
 
     //Hover Text Generation
     var span = document.createElement('span')
