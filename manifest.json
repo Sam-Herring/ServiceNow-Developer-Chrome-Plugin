@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "ServiceNow Developer Tools",
+  "version": "0.1.0",
+  "description": "USC Custom ServiceNow Developer Tools",
+
+  "content_scripts": [{
+	"js": ["content.js"],
+	"css": ["style.css"],
+    "matches": ["*://*.service-now.com/*"]
+  }]
+
+}
