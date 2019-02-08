@@ -1,6 +1,6 @@
-function createUpdateSetListIcon(){
+function createBannerButton(previousClassName, className, href, overlayText){
     //Get the appropriate location (NavPage Header Content)
-    var element = document.getElementsByClassName('navpage-pickers navpage-header-content');
+    var element = document.getElementsByClassName(previousClassName);
     var innerElement = element[0];
 
     //Generate the DOM Element to be injected
@@ -11,8 +11,8 @@ function createUpdateSetListIcon(){
 
     //Icon Generation
     var icon = document.createElement('a');
-    icon.className = 'icon-all-apps btn btn-icon ng-scope';
-    icon.href = '/sys_update_set_list.do';
+    icon.className = className;
+    icon.href = href;
     icon.target = 'gsft_main';
     var dataToggle = document.createAttribute('data-toggle');
     dataToggle.value = 'tooltip';
@@ -23,7 +23,7 @@ function createUpdateSetListIcon(){
     //Hover Text Generation
     var span = document.createElement('span')
     span.className = 'sr-only';
-    span.innerHTML = 'View All Update Sets';
+    span.innerHTML = overlayText;
 
     //Element Combination
     icon.appendChild(span);
@@ -37,5 +37,7 @@ console.log("--- RUNNING SHERRING CUSTOM SN DEV TOOLS ---");
 
 var isAdmin = document.getElementsByClassName("icon icon-unlocked elevated-role-indicator")[0];
 if(isAdmin.getAttribute('aria-hidden') == "false"){
-  createUpdateSetListIcon();
+  createBannerButton('navpage-pickers navpage-header-content', 'icon-all-apps btn btn-icon ng-scope', '/sys_update_set_list.do', 'View All Update Sets');
 }
+
+//icon-new-ticket

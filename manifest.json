@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "ServiceNow Developer Tools",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "USC Custom ServiceNow Developer Tools",
 
   "content_scripts": [{
