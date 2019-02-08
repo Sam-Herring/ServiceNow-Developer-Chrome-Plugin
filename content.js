@@ -19,6 +19,9 @@ function createBannerButton(previousClassName, className, href, overlayText){
     icon.setAttributeNode(dataToggle);
     icon.setAttributeNode(document.createAttribute('data-original-title'));
     icon.setAttributeNode(document.createAttribute('title'));
+    var inheader = document.createAttribute('in-header');
+    inheader.value = "true";
+    icon.setAttributeNode(inheader);
 
     //Hover Text Generation
     var span = document.createElement('span')
@@ -33,11 +36,28 @@ function createBannerButton(previousClassName, className, href, overlayText){
     innerElement.insertAdjacentElement('afterbegin', customDiv);
 }
 
+function createDivider(){
+  var element = document.getElementsByClassName('navpage-pickers navpage-header-content');
+  var innerElement = element[0];
+
+  var dividerDiv = document.createElement('div');
+  dividerDiv.className = 'divider';
+
+  innerElement.insertAdjacentElement('afterbegin', dividerDiv);
+}
+
 console.log("--- RUNNING SHERRING CUSTOM SN DEV TOOLS ---");
 
 var isAdmin = document.getElementsByClassName("icon icon-unlocked elevated-role-indicator")[0];
 if(isAdmin.getAttribute('aria-hidden') == "false"){
+  //Create the divider to seperate the OOB Banner Icons and the custom icons.
+  createDivider();
+
+  //Create Open All Update Sets Icon/Link
   createBannerButton('navpage-pickers navpage-header-content', 'icon-all-apps btn btn-icon ng-scope', '/sys_update_set_list.do', 'View All Update Sets');
+
+  //Create New Update Set Icon/Link
+  createBannerButton('navpage-pickers navpage-header-content', 'icon-new-ticket btn btn-icon ng-scope', '/sys_update_set.do', 'Create a New Update Set');
 }
 
 //icon-new-ticket
