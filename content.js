@@ -34,4 +34,8 @@ function createUpdateSetListIcon(){
 }
 
 console.log("--- RUNNING SHERRING CUSTOM SN DEV TOOLS ---");
-createUpdateSetListIcon();
+
+var isAdmin = document.getElementsByClassName("icon icon-unlocked elevated-role-indicator")[0];
+if(isAdmin.getAttribute('aria-hidden') == "false"){
+  createUpdateSetListIcon();
+}
