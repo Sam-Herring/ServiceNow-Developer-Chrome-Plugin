@@ -59,5 +59,3 @@ if(isAdmin.getAttribute('aria-hidden') == "false"){
   //Create New Update Set Icon/Link
   createBannerButton('navpage-pickers navpage-header-content', 'icon-new-ticket btn btn-icon ng-scope', '/sys_update_set.do', 'Create a New Update Set');
 }
-
-//icon-new-ticket
