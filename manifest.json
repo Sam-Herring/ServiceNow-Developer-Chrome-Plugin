@@ -8,8 +8,17 @@
   "omnibox": { "keyword" : "sn" },
 
   "background": {
-    "persistent": true,
+    "persistent": false,
     "scripts": ["background.js"]
+  },
+
+  "permissions": ["tabs"],
+
+  "commands": {
+    "save-record": {
+      "suggested_key": { "default": "Ctrl+Shift+S" },
+      "description": "Send a 'toggle-feature' event to the extension"
+    }
   },
 
   "content_scripts": [{

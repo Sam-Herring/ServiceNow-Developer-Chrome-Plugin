@@ -34,3 +34,15 @@ chrome.omnibox.onInputEntered.addListener(
       chrome.tabs.update({ url: newURL });
     }
   });
+
+  chrome.commands.onCommand.addListener( function(command) {
+      if(command === "save-record"){
+        chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+            url = tabs[0].url;
+            if(url.includes("service-now")){
+              alert(url);
+              chrome.tabs.update({ url: url + "return gsftSubmit(this);"});
+            }
+        });
+      }
+  });
