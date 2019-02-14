@@ -12,7 +12,11 @@
     "scripts": ["background.js"]
   },
 
-  "permissions": ["tabs"],
+  "permissions": [
+    "tabs",
+    "notifications",
+    "activeTab"
+  ],
 
   "commands": {
     "save-record": {

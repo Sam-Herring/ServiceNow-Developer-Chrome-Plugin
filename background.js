@@ -40,8 +40,11 @@ chrome.omnibox.onInputEntered.addListener(
         chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
             url = tabs[0].url;
             if(url.includes("service-now")){
-              alert(url);
-              chrome.tabs.update({ url: url + "return gsftSubmit(this);"});
+              //chrome.tabs.update({ url: url + "return gsftSubmit(this);"});
+              chrome.tabs.executeScript(null, {code:"gsftSubmit(gel('sysverb_update_and_stay'));"},
+                function(results){
+                  console.log(results);
+                });
             }
         });
       }

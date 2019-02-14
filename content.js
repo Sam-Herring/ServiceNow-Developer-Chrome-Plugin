@@ -48,8 +48,8 @@ function createDivider(){
 
 console.log("--- RUNNING SHERRING CUSTOM SN DEV TOOLS ---");
 
-var isAdmin = document.getElementsByClassName("icon icon-unlocked elevated-role-indicator")[0];
-if(isAdmin.getAttribute('aria-hidden') == "false"){
+var isAdmin = document.getElementById("update_set_picker_select");
+if(isAdmin != null){
   //Create the divider to seperate the OOB Banner Icons and the custom icons.
   createDivider();
 
