@@ -1,26 +1,38 @@
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps {
-color: #fff;
-float: left;
-line-height: 26px;
-margin-left: 0; }
-
+	color: #fff;
+	float: left;
+	line-height: 26px;
+	margin-left: 0;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps {
-height: 31px;
-width: 31px; }
-
+	height: 31px;
+	width: 31px;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:hover,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:hover,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:hover,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:hover,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:hover,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:hover {
-background-color: rgba(0, 0, 0, 0.2);
-color: #278efc; }
-
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #278efc;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:active,
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:focus,
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot.state-selected,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:active,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:focus,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot.state-selected,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:active,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:focus,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket.state-selected,
@@ -33,40 +45,53 @@ html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.i
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:active,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:focus,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps.state-selected {
-border: 1px solid transparent;
-color: #278efc; }
-
+	border: 1px solid transparent;
+	color: #278efc;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot .sn-badge,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket .sn-badge,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps .sn-badge,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket .sn-badge {
-top: -4px;
-right: -7px;
-position: absolute;
-transition: inherit; }
-
+	top: -4px;
+	right: -7px;
+	position: absolute;
+	transition: inherit;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps {
-color: #fff;
-float: left;
-line-height: 26px;
-margin-left: 0; }
-
+	color: #fff;
+	float: left;
+	line-height: 26px;
+	margin-left: 0;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps {
-height: 31px;
-width: 31px; }
-
+	height: 31px;
+	width: 31px;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:hover,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:hover,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:hover,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:hover,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:hover,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:hover {
-background-color: rgba(0, 0, 0, 0.2);
-color: #278efc; }
-
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #278efc;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:active,
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:focus,
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot.state-selected,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:active,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot:focus,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot.state-selected,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:active,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket:focus,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket.state-selected,
@@ -79,14 +104,17 @@ html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.i
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:active,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps:focus,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps.state-selected {
-border: 1px solid transparent;
-color: #278efc; }
-
+	border: 1px solid transparent;
+	color: #278efc;
+}
+.sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot .sn-badge,
+html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-bot .sn-badge,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket .sn-badge,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-new-ticket .sn-badge,
 .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps .sn-badge,
 html.compact .sn-frameset-header .navbar-collapse .navpage-header-content .btn.icon-all-apps .sn-badge {
-top: -4px;
-right: -7px;
-position: absolute;
-transition: inherit; }
+	top: -4px;
+	right: -7px;
+	position: absolute;
+	transition: inherit;
+}

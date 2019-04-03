@@ -54,8 +54,24 @@ if(isAdmin != null){
   createDivider();
 
   //Create Open All Update Sets Icon/Link
-  createBannerButton('navpage-pickers navpage-header-content', 'icon-all-apps btn btn-icon ng-scope', '/sys_update_set_list.do', 'View All Update Sets');
+  createBannerButton('navpage-pickers navpage-header-content',
+    'icon-all-apps btn btn-icon ng-scope',
+    '/sys_update_set_list.do',
+    'View All Update Sets'
+  );
 
   //Create New Update Set Icon/Link
-  createBannerButton('navpage-pickers navpage-header-content', 'icon-new-ticket btn btn-icon ng-scope', '/sys_update_set.do', 'Create a New Update Set');
+  createBannerButton('navpage-pickers navpage-header-content',
+    'icon-new-ticket btn btn-icon ng-scope',
+    '/sys_update_set.do',
+    'Create a New Update Set'
+  );
+
+  //Create Update Sources Icon/Link
+  createBannerButton('navpage-pickers navpage-header-content',
+    'icon-bot btn btn-icon ng-scope',
+    '/sys_update_set_list.do',
+    'View All Update Sets'
+  );
+
 }
