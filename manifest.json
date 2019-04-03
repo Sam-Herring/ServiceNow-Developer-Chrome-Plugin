@@ -3,7 +3,7 @@
 
   "name": "ServiceNow Developer Tools",
   "options_page": "options.html",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "USC Custom ServiceNow Developer Tools",
 
   "omnibox": { "keyword" : "sn" },
