@@ -7,7 +7,7 @@ function textSplitter(text){
 }
 
 function newSearch(environment, searchTerm){
-  var newURL = "https://" + environment + ".service-now.com/text_search_exact_match.do?sysparm_search=" + encodeURIComponent(searchTerm);
+  var newURL = "https://" + environment + ".service-now.com/nav_to.do?uri=%2Ftext_search_exact_match.do?sysparm_search=" + encodeURIComponent(searchTerm);
   chrome.tabs.update({ url: newURL });
 }
 
