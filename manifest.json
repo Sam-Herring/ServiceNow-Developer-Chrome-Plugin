@@ -2,6 +2,7 @@
   "manifest_version": 2,
 
   "name": "ServiceNow Developer Tools",
+  "options_page": "options.html",
   "version": "0.3.0",
   "description": "USC Custom ServiceNow Developer Tools",
 
@@ -15,7 +16,8 @@
   "permissions": [
     "tabs",
     "notifications",
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
 
   "commands": {
