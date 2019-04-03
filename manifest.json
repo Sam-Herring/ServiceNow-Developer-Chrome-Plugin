@@ -6,7 +6,9 @@
   "version": "0.4.0",
   "description": "USC Custom ServiceNow Developer Tools",
 
-  "omnibox": { "keyword" : "sn" },
+  "omnibox": {
+    "keyword" : "sn"
+   },
 
   "background": {
     "persistent": false,

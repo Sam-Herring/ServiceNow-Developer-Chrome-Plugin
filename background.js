@@ -29,6 +29,14 @@ chrome.omnibox.onInputEntered.addListener(
       //Create the new Search URL in a new Tab
       var newURL = "https://uscdev.service-now.com/nav_to.do?uri=%2F$sn_global_search_results.do%3Fsysparm_search%3D" + encodeURIComponent(searchTerm);
       chrome.tabs.update({ url: newURL });
+    } else if (text.startsWith("docs ")){
+      //Sperate the potential search terms from the query
+      var textArray = text.split(' ');
+      textArray.shift();
+      var searchTerm = textArray.join(' ');
+
+      var newURL = "https://docs.servicenow.com/search?q=" + encodeURIComponent(searchTerm) + "&labels=3";
+        chrome.tabs.update({ url: newURL });
     } else {
       //Just search the result against Production
     var newURL = "https://usc.service-now.com/nav_to.do?uri=%2F$sn_global_search_results.do%3Fsysparm_search%3D" + encodeURIComponent(text);
