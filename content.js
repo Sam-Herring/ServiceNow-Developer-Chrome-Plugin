@@ -174,6 +174,15 @@ chrome.runtime.onMessage.addListener(
     // listen for messages sent from background.js
     if (request.message === 'urlChanged') {
       if(document.URL.includes('incident.do')){
+        //Create a VR Split
+        createBannerButton(
+          'split',
+          'navpage-pickers navpage-header-content',
+          'icon-or btn btn-icon ng-scope disabled',
+          '',
+          '',
+          true
+        );
         console.log("--- ADDING INCIDENT MAIL LINK ---");
         createBannerLink(
           'new_email',
@@ -184,8 +193,26 @@ chrome.runtime.onMessage.addListener(
           '_blank',
           true
         );
+        //Create a VR Split
+        createBannerButton(
+          'split',
+          'navpage-pickers navpage-header-content',
+          'icon-or btn btn-icon ng-scope disabled',
+          '',
+          '',
+          true
+        );
       } else if(document.URL.includes('u_request.do')){
         console.log("--- ADDING REQUEST MAIL LINK ---");
+        //Create a VR Split
+        createBannerButton(
+          'split',
+          'navpage-pickers navpage-header-content',
+          'icon-or btn btn-icon ng-scope disabled',
+          '',
+          '',
+          true
+        );
         createBannerLink(
           'new_email',
           'navpage-pickers navpage-header-content',
@@ -193,6 +220,15 @@ chrome.runtime.onMessage.addListener(
           '/email_client.do?sysparm_table=u_request&sysparm_sys_id=' + getSysID(),
           "New Email",
           '_blank',
+          true
+        );
+        //Create a VR Split
+        createBannerButton(
+          'split',
+          'navpage-pickers navpage-header-content',
+          'icon-or btn btn-icon ng-scope disabled',
+          '',
+          '',
           true
         );
       } else if(!document.URL.includes("u_request.do") && !document.URL.includes("incident.do")){
