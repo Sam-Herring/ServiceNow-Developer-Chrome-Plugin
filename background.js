@@ -45,23 +45,13 @@ chrome.omnibox.onInputEntered.addListener(
       var newURL = "https://docs.servicenow.com/search?q=" + encodeURIComponent(searchTerm) + "&labels=3";
       chrome.tabs.update({ url: newURL });
 
+    } else if (text.startsWith("[]")){
+      var searchTerm = textSplitter(text);
+      var newURL = "https://usc.service-now.com/nav_to.do?uri=%2F" + encodeURIComponent(searchTerm) + "_list.do";
+      chrome.tabs.update({ url: newURL });
+
     } else {
       //Just search the result against Production
       var searchTerm = text;
       newSearch("usc", searchTerm);
   }});
-
-chrome.commands.onCommand.addListener( function(command) {
-    if(command === "save-record"){
-      chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-          url = tabs[0].url;
-          if(url.includes("service-now")){
-            //chrome.tabs.update({ url: url + "return gsftSubmit(this);"});
-            chrome.tabs.executeScript(null, {code:"gsftSubmit(gel('sysverb_update_and_stay'));"},
-              function(results){
-                console.log(results);
-              });
-          }
-      });
-    }
-});
