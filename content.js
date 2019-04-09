@@ -151,7 +151,7 @@ if(document.getElementById("update_set_picker_select") != null){
     "update_sources",
     'navpage-pickers navpage-header-content',
     'icon-bot btn btn-icon ng-scope',
-    '/sys_update_set_list.do',
+    '/sys_update_source_list.do',
     'Update Sources',
     '',
     false
