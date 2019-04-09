@@ -176,7 +176,7 @@ chrome.runtime.onMessage.addListener(
       if(document.URL.includes('incident.do')){
         //Create a VR Split
         createBannerButton(
-          'split',
+          'split1',
           'navpage-pickers navpage-header-content',
           'icon-or btn btn-icon ng-scope disabled',
           '',
@@ -195,7 +195,7 @@ chrome.runtime.onMessage.addListener(
         );
         //Create a VR Split
         createBannerButton(
-          'split',
+          'split2',
           'navpage-pickers navpage-header-content',
           'icon-or btn btn-icon ng-scope disabled',
           '',
@@ -206,7 +206,7 @@ chrome.runtime.onMessage.addListener(
         console.log("--- ADDING REQUEST MAIL LINK ---");
         //Create a VR Split
         createBannerButton(
-          'split',
+          'split1',
           'navpage-pickers navpage-header-content',
           'icon-or btn btn-icon ng-scope disabled',
           '',
@@ -224,7 +224,7 @@ chrome.runtime.onMessage.addListener(
         );
         //Create a VR Split
         createBannerButton(
-          'split',
+          'split2',
           'navpage-pickers navpage-header-content',
           'icon-or btn btn-icon ng-scope disabled',
           '',
@@ -233,6 +233,8 @@ chrome.runtime.onMessage.addListener(
         );
       } else if(!document.URL.includes("u_request.do") && !document.URL.includes("incident.do")){
         document.getElementById('new_email').remove();
+        document.getElementById('split1').remove();
+        document.getElementById('split2').remove();
       }
     }
 });
