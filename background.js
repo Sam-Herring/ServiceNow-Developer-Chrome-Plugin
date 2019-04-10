@@ -6,6 +6,11 @@ function textSplitter(text){
   return searchTerm;
 }
 
+function prefixer(text){
+  var textArray = text.split(' ');
+  return textArray[0];
+}
+
 chrome.tabs.onUpdated.addListener(
   function(tabId, changeInfo, tab) {
     // read changeInfo data and do something with it
@@ -19,39 +24,46 @@ chrome.tabs.onUpdated.addListener(
   }
 );
 
-function newSearch(environment, searchTerm){
-  var newURL = "https://" + environment + ".service-now.com/nav_to.do?uri=%2Ftext_search_exact_match.do?sysparm_search=" + encodeURIComponent(searchTerm);
+function newSearch(environment, specific, searchTerm, suffix){
+  var newURL = "https://" + environment + specific + encodeURIComponent(searchTerm) + suffix;
   chrome.tabs.update({ url: newURL });
+}
+
+function newTableSearch(prefix, searchTerm){
+  searchTerm = searchTerm.replace("[", '');
+  searchTerm = searchTerm.replace("]", '');
+  newSearch(prefix, ".service-now.com/nav_to.do?uri=%2F", searchTerm.toString(), "_list.do");
 }
 
 // This event is fired with the user accepts the input in the omnibox.
 chrome.omnibox.onInputEntered.addListener(
   function(text) {
-    text = text.toLowerCase();
-    if(text.startsWith("prod ")){
-      var searchTerm = textSplitter(text);
-      newSearch("usc", searchTerm);
+    var text = text.toLowerCase();
+    var prefix = prefixer(text);
 
-    } else if(text.startsWith("test ")){
-      var searchTerm = textSplitter(text);
-      newSearch("usctest", searchTerm);
+    if(prefix == 'test ' || prefix == 'dev '){
+      var searchTerm = (textSplitter(text));
+      console.log(searchTerm);
+      prefix = "usc" + prefix;
 
-    } else if(text.startsWith("dev ")){
-      var searchTerm = textSplitter(text);
-      newSearch("uscdev", searchTerm);
+      if(searchTerm.match(/\[.*\]/g)){
+        newTableSearch(prefix, searchTerm);
+      } else {
+        newSearch(prefix, ".service-now.com/nav_to.do?uri=%2Ftext_search_exact_match.do?sysparm_search=", searchTerm, "");
+      }
 
     } else if (text.startsWith("docs ")){
       var searchTerm = textSplitter(text);
       var newURL = "https://docs.servicenow.com/search?q=" + encodeURIComponent(searchTerm) + "&labels=3";
       chrome.tabs.update({ url: newURL });
-
-    } else if (text.startsWith("[]")){
-      var searchTerm = textSplitter(text);
-      var newURL = "https://usc.service-now.com/nav_to.do?uri=%2F" + encodeURIComponent(searchTerm) + "_list.do";
-      chrome.tabs.update({ url: newURL });
-
     } else {
       //Just search the result against Production
       var searchTerm = text;
-      newSearch("usc", searchTerm);
-  }});
+      if(searchTerm.match(/\[.*\]/g)){
+        newTableSearch("usc", searchTerm);
+      } else {
+        newSearch("usc", ".service-now.com/nav_to.do?uri=%2Ftext_search_exact_match.do?sysparm_search=", searchTerm, "");
+      }
+    }
+  }
+);
