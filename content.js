@@ -173,6 +173,13 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     // listen for messages sent from background.js
     if (request.message === 'urlChanged') {
+      try {
+        document.getElementById('new_email').remove();
+        document.getElementById('split1').remove();
+        document.getElementById('split2').remove();
+      } catch(err){
+        console.log(err);
+      }
       if(document.URL.includes('incident.do')){
         //Create a VR Split
         createBannerButton(
@@ -231,10 +238,6 @@ chrome.runtime.onMessage.addListener(
           '',
           true
         );
-      } else if(!document.URL.includes("u_request.do") && !document.URL.includes("incident.do")){
-        document.getElementById('new_email').remove();
-        document.getElementById('split1').remove();
-        document.getElementById('split2').remove();
       }
     }
 });
