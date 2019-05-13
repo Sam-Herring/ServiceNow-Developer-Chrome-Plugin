@@ -216,8 +216,7 @@ chrome.runtime.onMessage.addListener(
           'split1',
           'navpage-pickers navpage-header-content',
           'icon-or btn btn-icon ng-scope disabled',
-          '',
-          '',
+          ''
           true
         );
         createBannerLink(
