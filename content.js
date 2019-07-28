@@ -101,11 +101,9 @@ function createDivider(){
   innerElement.insertAdjacentElement('afterbegin', dividerDiv);
 }
 
-function getSysID(){
+function getURL(){
   var url = document.URL;
-  var extract = url.match(/sys_id%\w*%/g);
-  var sys_id = extract[0].replace('sys_id%', "").replace('%',"");
-  return sys_id;
+  return url.toString();
 }
 
 console.log("--- RUNNING SHERRING CUSTOM SN DEV TOOLS ---");
@@ -166,8 +164,7 @@ if(document.getElementById("update_set_picker_select") != null){
     '',
     true
   );
-
-}
+};
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -190,6 +187,7 @@ chrome.runtime.onMessage.addListener(
           '',
           true
         );
+
         console.log("--- ADDING INCIDENT MAIL LINK ---");
         createBannerLink(
           'new_email',
@@ -200,6 +198,18 @@ chrome.runtime.onMessage.addListener(
           '_blank',
           true
         );
+
+        //Create the 'Open in New Tab' Button
+        createBannerLink(
+          'openNewTab',
+          'navpage-pickers navpage-header-content',
+          'icon-new-ticket btn btn-icon ng-scope',
+          getURL(),
+          'Open in New Tab',
+          '_blank',
+          false
+        );
+
         //Create a VR Split
         createBannerButton(
           'split2',
@@ -209,7 +219,9 @@ chrome.runtime.onMessage.addListener(
           '',
           true
         );
-      } else if(document.URL.includes('u_request.do')){
+      }
+
+      else if(document.URL.includes('u_request.do')){
         console.log("--- ADDING REQUEST MAIL LINK ---");
         //Create a VR Split
         createBannerButton(
@@ -219,15 +231,28 @@ chrome.runtime.onMessage.addListener(
           '',
           true
         );
+
         createBannerLink(
           'new_email',
           'navpage-pickers navpage-header-content',
           'icon-mail btn btn-icon ng-scope',
-          '/email_client.do?sysparm_table=u_request&sysparm_sys_id=' + getSysID(),
+          '/email_client.do?sysparm_table=u_request&sysparm_sys_id=',
           "New Email",
           '_blank',
           true
         );
+
+        //Create the 'Open in New Tab' Button
+        createBannerLink(
+          'openNewTab',
+          'navpage-pickers navpage-header-content',
+          'icon-new-ticket btn btn-icon ng-scope',
+          getURL(),
+          'Open in New Tab',
+          '_blank',
+          false
+        );
+
         //Create a VR Split
         createBannerButton(
           'split2',
